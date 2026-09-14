@@ -80,7 +80,6 @@ text = "Arena2"
 
 [node name="BG_Menu" parent="." unique_id=503310466 instance=ExtResource("2_upctu")]
 show_behind_parent = true
-position = Vector2(-6, -5)
 
 [connection signal="pressed" from="menu_buttons/Play" to="menu_buttons" method="_on_play_pressed"]
 [connection signal="pressed" from="menu_buttons/Exit" to="menu_buttons" method="_on_exit_pressed"]
