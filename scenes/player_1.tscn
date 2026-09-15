@@ -3,15 +3,47 @@
 [ext_resource type="Script" uid="uid://c1iivg27e38k5" path="res://scenes/player_1.gd" id="1_gneq0"]
 [ext_resource type="Texture2D" uid="uid://b8cbdyrlk1rm" path="res://techures/topotun.png" id="2_gneq0"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gneq0"]
+atlas = ExtResource("2_gneq0")
+region = Rect2(0, 0, 128, 177)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7tsm"]
+atlas = ExtResource("2_gneq0")
+region = Rect2(128, 0, 128, 177)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vod78"]
+atlas = ExtResource("2_gneq0")
+region = Rect2(256, 0, 128, 177)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqd30"]
+atlas = ExtResource("2_gneq0")
+region = Rect2(384, 0, 128, 177)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2c3w"]
+atlas = ExtResource("2_gneq0")
+region = Rect2(512, 0, 128, 177)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gneq0")
+"texture": SubResource("AtlasTexture_gneq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7tsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vod78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqd30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2c3w")
 }],
 "loop": 1,
-"name": &"run",
-"speed": 6.0
+"name": &"idle",
+"speed": 10.0
 }]
 
 [node name="Player1" type="CharacterBody2D" unique_id=1996630799]
@@ -21,10 +53,10 @@ script = ExtResource("1_gneq0")
 position = Vector2(0, 0.9999924)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
-animation = &"run"
-autoplay = "run"
-frame_progress = 0.5761062
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.117016725
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=550818280]
-position = Vector2(-7, 17)
-polygon = PackedVector2Array(-15, -22, 6, -24, 23, -17, 21, 14, 16, 31, -16, 32, -17, 11)
+position = Vector2(2, -4)
+polygon = PackedVector2Array(-8, -24, 1, -25, 12, -23, 25, -16, 23, -8, 11, -6, 9, 3, 5, 10, 8, 20, 18, 24, 16, 32, -17, 32, -14, 22, -17, 10, -9, -1, -9, -8, -14, -14, -14, -20)
