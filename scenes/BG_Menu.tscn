@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dawk00bnhj2gq"]
 
-[ext_resource type="Texture2D" uid="uid://cpmodvhpdcrqt" path="res://techures/Black_huina.png" id="1_xagfw"]
+[ext_resource type="Script" uid="uid://xae7d7wj8phd" path="res://scenes/bg_menu.gd" id="1_ao42n"]
 
 [node name="BG_Menu" type="Node2D" unique_id=503310466]
+script = ExtResource("1_ao42n")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=564339285]
-
-[node name="BlackHuina" type="Sprite2D" parent="Parallax2D" unique_id=1843297299]
-position = Vector2(322.5, 180.5)
-scale = Vector2(0.5668403, 0.5694444)
-texture = ExtResource("1_xagfw")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2073434446]
+offset_right = 638.0
+offset_bottom = 363.0
+mouse_filter = 2
+mouse_behavior_recursive = 1

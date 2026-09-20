@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://vomgh5yidphi" path="res://techures/Industrial_Grid.png" id="1_s6hhk"]
 [ext_resource type="PackedScene" uid="uid://r17hfvbpxhpg" path="res://scenes/player_1.tscn" id="2_og1mu"]
+[ext_resource type="PackedScene" uid="uid://bw3qkodhseeik" path="res://scenes/player_2.tscn" id="3_xjnh2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk7i1"]
 texture = ExtResource("1_s6hhk")
@@ -69,3 +70,6 @@ tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Player1" parent="." unique_id=1996630799 instance=ExtResource("2_og1mu")]
 position = Vector2(110, 257)
+
+[node name="CharacterBody2D" parent="." unique_id=1534546448 instance=ExtResource("3_xjnh2")]
+position = Vector2(520, 267)

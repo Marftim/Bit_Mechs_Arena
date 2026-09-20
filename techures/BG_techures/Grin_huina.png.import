@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpmodvhpdcrqt"
-path="res://.godot/imported/Black_huina.png-a677c7ca377067a7f8deb1a09f7537c4.ctex"
+uid="uid://nosldfu3dy1c"
+path="res://.godot/imported/Grin_huina.png-7d8e061ad0c82bfe7a4ba9e3d0fe60b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://techures/Black_huina.png"
-dest_files=["res://.godot/imported/Black_huina.png-a677c7ca377067a7f8deb1a09f7537c4.ctex"]
+source_file="res://techures/BG_techures/Grin_huina.png"
+dest_files=["res://.godot/imported/Grin_huina.png-7d8e061ad0c82bfe7a4ba9e3d0fe60b6.ctex"]
 
 [params]
 

@@ -6,40 +6,6 @@
 
 [node name="Menu" type="Node2D" unique_id=579431591]
 
-[node name="menu_buttons" type="Control" parent="." unique_id=2125477197]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 647.0
-offset_bottom = 365.0
-script = ExtResource("2_11y2r")
-
-[node name="Play" type="Button" parent="menu_buttons" unique_id=1017821866]
-layout_mode = 0
-offset_left = 245.0
-offset_top = 110.0
-offset_right = 395.0
-offset_bottom = 153.0
-theme_override_font_sizes/font_size = 25
-text = "Play"
-
-[node name="Exit" type="Button" parent="menu_buttons" unique_id=835836253]
-layout_mode = 0
-offset_left = 245.0
-offset_top = 250.0
-offset_right = 395.0
-offset_bottom = 293.0
-theme_override_font_sizes/font_size = 25
-text = "Exit"
-
-[node name="Settings" type="Button" parent="menu_buttons" unique_id=1521989278]
-layout_mode = 0
-offset_left = 245.0
-offset_top = 180.0
-offset_right = 395.0
-offset_bottom = 223.0
-theme_override_font_sizes/font_size = 25
-text = "Settings"
-
 [node name="GAme_Name" type="Label" parent="." unique_id=1490146492]
 offset_left = 74.0
 offset_top = 17.0
@@ -78,11 +44,45 @@ offset_bottom = 218.0
 theme_override_font_sizes/font_size = 25
 text = "Arena2"
 
+[node name="menu_buttons" type="Control" parent="." unique_id=2125477197]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 647.0
+offset_bottom = 365.0
+script = ExtResource("2_11y2r")
+
+[node name="Play" type="Button" parent="menu_buttons" unique_id=1017821866]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 110.0
+offset_right = 395.0
+offset_bottom = 153.0
+theme_override_font_sizes/font_size = 25
+text = "Play"
+
+[node name="Exit" type="Button" parent="menu_buttons" unique_id=835836253]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 250.0
+offset_right = 395.0
+offset_bottom = 293.0
+theme_override_font_sizes/font_size = 25
+text = "Exit"
+
+[node name="Settings" type="Button" parent="menu_buttons" unique_id=1521989278]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 180.0
+offset_right = 395.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 25
+text = "Settings"
+
 [node name="BG_Menu" parent="." unique_id=503310466 instance=ExtResource("2_upctu")]
 show_behind_parent = true
 
+[connection signal="pressed" from="level_buttons/Arena" to="level_buttons" method="_on_arena_pressed"]
+[connection signal="pressed" from="level_buttons/Arena2" to="level_buttons" method="_on_arena_2_pressed"]
 [connection signal="pressed" from="menu_buttons/Play" to="menu_buttons" method="_on_play_pressed"]
 [connection signal="pressed" from="menu_buttons/Exit" to="menu_buttons" method="_on_exit_pressed"]
 [connection signal="pressed" from="menu_buttons/Settings" to="menu_buttons" method="_on_settings_pressed"]
-[connection signal="pressed" from="level_buttons/Arena" to="level_buttons" method="_on_arena_pressed"]
-[connection signal="pressed" from="level_buttons/Arena2" to="level_buttons" method="_on_arena_2_pressed"]
