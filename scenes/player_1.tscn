@@ -5,23 +5,23 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gneq0"]
 atlas = ExtResource("2_gneq0")
-region = Rect2(0, 0, 128, 177)
+region = Rect2(0, 176, 128, 176)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7tsm"]
 atlas = ExtResource("2_gneq0")
-region = Rect2(128, 0, 128, 177)
+region = Rect2(128, 176, 128, 176)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vod78"]
 atlas = ExtResource("2_gneq0")
-region = Rect2(256, 0, 128, 177)
+region = Rect2(256, 176, 128, 176)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqd30"]
 atlas = ExtResource("2_gneq0")
-region = Rect2(384, 0, 128, 177)
+region = Rect2(384, 176, 128, 176)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2c3w"]
 atlas = ExtResource("2_gneq0")
-region = Rect2(512, 0, 128, 177)
+region = Rect2(512, 176, 128, 176)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
@@ -43,20 +43,28 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 10.0
+"speed": 12.0
 }]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_gneq0"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Player1" type="CharacterBody2D" unique_id=1996630799]
 script = ExtResource("1_gneq0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1919967752]
 position = Vector2(0, 0.9999924)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.5735457
+frame_progress = 0.74788076
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=550818280]
-position = Vector2(2, -4)
-polygon = PackedVector2Array(-8, -23, 1, -24, 12, -23, 20, -17, 23, -13, 22, -9, 15.282806, -7.168041, 8, -7, 11, -5, 10, 2, 5, 10, 8, 20, 18, 24, 16, 32, 0, 33, -18, 33, -14, 22, -18, 12, -10, -2, -9, -8, -14, -13, -14, -20)
+position = Vector2(7, -10)
+scale = Vector2(2.280109, 2.029853)
+polygon = PackedVector2Array(-8, -23, 1, -24, 10.525812, -22.66174, 15.788719, -17.735271, 18.85875, -13.794101, 18.85875, -9.360283, 15.282806, -7.168041, 8, -7, 8.771511, -3.9411716, 8.332935, 2.4632325, 3.0700288, 11.823516, 6.140057, 22.66174, 13.595842, 26.110264, 11.402964, 32.022022, 0, 33, -18, 33, -14, 22, -18, 12, -10, -2, -9, -8, -14, -13, -14, -20)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1082473974]
+replication_config = SubResource("SceneReplicationConfig_gneq0")
