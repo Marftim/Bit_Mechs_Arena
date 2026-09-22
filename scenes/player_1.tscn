@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://r17hfvbpxhpg"]
 
-[ext_resource type="Script" uid="uid://c1iivg27e38k5" path="res://scenes/player_1.gd" id="1_gneq0"]
+[ext_resource type="Script" uid="uid://c1iivg27e38k5" path="res://scripts/player_1.gd" id="1_gneq0"]
 [ext_resource type="Texture2D" uid="uid://b8cbdyrlk1rm" path="res://techures/topotun.png" id="2_gneq0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gneq0"]

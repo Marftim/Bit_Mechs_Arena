@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Альфа"
-run/main_scene="uid://d36bs0t6vtfff"
+config/name="BMA"
+run/main_scene="uid://tphbipgu3svy"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="uid://doelm7qxcj4yv"
 
 [display]
 

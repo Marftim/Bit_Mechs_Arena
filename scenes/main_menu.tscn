@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://tphbipgu3svy"]
+
+[ext_resource type="Script" uid="uid://dhdc5a6tnr5nu" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://dawk00bnhj2gq" path="res://scenes/BG_Menu.tscn" id="2_ekxnf"]
+
+[node name="Main_Menu" type="Control" unique_id=146883762]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Main_Buttons" type="VBoxContainer" parent="." unique_id=119997988]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Main_Buttons" unique_id=1097318592]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[node name="Settings" type="Button" parent="Main_Buttons" unique_id=832210718]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Main_Buttons" unique_id=756651237]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Exit"
+
+[node name="Play_Buttons" type="VBoxContainer" parent="." unique_id=826493322]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arena1" type="Button" parent="Play_Buttons" unique_id=453895821]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Arena1"
+
+[node name="Arena2" type="Button" parent="Play_Buttons" unique_id=2084293989]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Arena2"
+
+[node name="Label" type="Label" parent="." unique_id=1730998521]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -392.5
+offset_top = 40.0
+offset_right = 392.5
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0.15686275, 1)
+theme_override_font_sizes/font_size = 125
+text = "Bit Mechs Arena"
+
+[node name="BG_Menu" parent="." unique_id=503310466 instance=ExtResource("2_ekxnf")]
+show_behind_parent = true
+
+[connection signal="pressed" from="Main_Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main_Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main_Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Play_Buttons/Arena1" to="." method="_on_arena_1_pressed"]
+[connection signal="pressed" from="Play_Buttons/Arena2" to="." method="_on_arena_2_pressed"]
