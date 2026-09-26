@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dawk00bnhj2gq"]
 
 [ext_resource type="Script" uid="uid://xae7d7wj8phd" path="res://scripts/bg_menu.gd" id="1_ao42n"]
+[ext_resource type="Script" uid="uid://b2mcit2cklbpk" path="res://scenes/texture_rect.gd" id="2_ao42n"]
 
 [node name="BG_Menu" type="Node2D" unique_id=503310466]
 script = ExtResource("1_ao42n")
@@ -10,3 +11,4 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
+script = ExtResource("2_ao42n")
